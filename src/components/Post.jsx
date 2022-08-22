@@ -1,14 +1,15 @@
+import { Comment } from './Comment';
 import styles from './Post.module.css';
 
-export function Post() {
+export function Post(props) {
   return (
     <article className={styles.post}>
       <header>
         <div className={styles.author}>
           <img className={styles.avatar} src="https://github.com/brenoq.png" />
           <div className={styles.authorInfo}>
-            <strong>Breno Quirino</strong>
-            <span>Web Developer</span>
+            <strong> {props.name} </strong>
+            <span> {props.info} </span>
           </div>
         </div>
 
@@ -31,8 +32,16 @@ export function Post() {
 
         <textarea placeholder="Deixe um comentário" />
 
-        <button type='submit'>Comentar</button>  
+        <footer>
+          <button type='submit'>Comentar</button>  
+        </footer>
       </form>
+
+      <div className={styles.commentList}>
+        <Comment />
+        <Comment />
+        <Comment />
+      </div>
     </article>
   );
 }

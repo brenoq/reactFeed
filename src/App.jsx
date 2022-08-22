@@ -14,8 +14,8 @@ export function App() {
         <Sidebar />
 
         <main>
-          <Post />
-          <Post />
+          <Post name='Breno Quirino' info='Programador'/>
+          <Post name='Jefferson Barbosa' info='Web Designer'/>
         </main>
       </div>
     </div>
